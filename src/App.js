@@ -1,16 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import Categories from './components/Categories';
+import React from 'react';
+import { Route } from 'react-router-dom';
+
+import { Header, Nav } from './components';
+import { Home, Messages, Friends, UserCorrespondence } from './pages';
 
 function App() {
-  const cat = ['Все', 'Вкусные', 'разные', 'Очень', 'Сладкие'];
-
-  // useEffect(() => {
-  //   document.title = name;
-  // });
   return (
     <div>
-      <h1>{cat}</h1>
-      <Categories cat={cat} onClick={(name) => (document.title = name)} />
+      <Header />
+
+      <div className="app-wrapper">
+        <Nav />
+        <div className="app-wrapper-content">
+          <Route exact path="/" render={() => <Home />} />
+          <Route exact path="/messages" render={() => <Messages />} />
+          <Route path="/friends" render={() => <Friends />} />
+          <Route
+            path="/messages/:number"
+            render={() => <UserCorrespondence />}
+          />
+        </div>
+      </div>
     </div>
   );
 }

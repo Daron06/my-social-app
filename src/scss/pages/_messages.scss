@@ -1,0 +1,24 @@
+.messages {
+  min-height: 500px;
+  &_user {
+    display: flex;
+    height: 75px;
+    border-bottom: black 1px solid;
+    margin-bottom: 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: $background-dark;
+      opacity: 0.2;
+    }
+  }
+
+  &_avatar {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: violet;
+  }
+  &_info {
+    padding-left: 20px;
+  }
+}

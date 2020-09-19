@@ -1,0 +1,14 @@
+.friends {
+  display: flex;
+  padding-left: 20px;
+
+  &_left_block {
+    position: relative;
+    width: 500px;
+    min-height: 500px;
+  }
+
+  &_rigth_block {
+    flex: 1;
+  }
+}

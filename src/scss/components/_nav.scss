@@ -1,0 +1,13 @@
+.nav {
+  min-width: 125px;
+  // height: 700px;
+  ul {
+    li {
+      padding: 10px;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}

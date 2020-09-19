@@ -1,0 +1,13 @@
+.header {
+  background-color: $header;
+
+  &-wrapper {
+    width: 65%;
+    margin: 0 auto;
+  }
+}
+
+.logo-img {
+  height: 50px;
+  cursor: pointer;
+}
